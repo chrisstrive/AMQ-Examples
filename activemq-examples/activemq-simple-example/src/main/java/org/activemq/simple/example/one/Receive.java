@@ -48,7 +48,7 @@ public class Receive {
 			// 获取session
 			session = connection.createSession(true, Session.AUTO_ACKNOWLEDGE);
 			// 指定目的地
-			destination = session.createQueue("chris");
+			destination = session.createQueue("activemq.simple.example.one.sender");
 			// 得到生产者者
 			consumer = session.createConsumer(destination);
 

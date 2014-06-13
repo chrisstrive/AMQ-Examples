@@ -51,7 +51,7 @@ public class Sender {
 			// 获取session
 			session = connection.createSession(true, Session.AUTO_ACKNOWLEDGE);
 			// 指定目的地
-			destination = session.createQueue("FirstQueue");
+			destination = session.createQueue("activemq.simple.example.one.sender");
 			// 得到生产者者
 			producer = session.createProducer(destination);
 			// 设置不持久化，此处学习，实际根据项目决定
