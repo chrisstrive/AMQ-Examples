@@ -34,7 +34,7 @@ public class Sender {
 			@Override
 			public Message createMessage(Session session) throws JMSException {
 				MapMessage message = session.createMapMessage();
-				message.setString("message", "current system times: " + DateTime.now().toString());
+				message.setString("message", "current system times: " + DateTime.now().toString("YYYY/MM/dd HH:mm:ss"));
 				return message;
 			}
 		});
